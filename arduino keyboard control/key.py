@@ -2,11 +2,14 @@ import keyboard
 import serial
 
 output = serial.Serial("COM3",9600)
+
+
 while True:
 	if keyboard.is_pressed("w") :
-		output.write(b'w')
+		output.write(b'w')  #tracking the event 'w' pressed then send it serialy to Arduino
 	else:
-		output.write(b's')
+		pass
+
 
 
 #important note: you have to clear the python code and run an empty
